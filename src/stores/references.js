@@ -5,24 +5,30 @@ export const useReferencesStore = defineStore('references', {
     references: [
       {
         id: 1,
-        title: "Site E-commerce",
-        description: "Création d'une boutique en ligne moderne",
+        title: "Pousse ta fonte",
+        description: "Bibliothèque typographique en ligne",
         image: "https://picsum.photos/200/300",
-        category: "Web"
+        category: "Typographie",
+        link: "https://www.poussetafonte.com/",
+        favicon: "https://www.google.com/s2/favicons?domain_url=poussetafonte.com "
       },
       {
         id: 2,
-        title: "Application Mobile",
-        description: "Application de gestion de tâches",
+        title: "Typogaphic Posters",
+        description: "Website pour des références de posters en tout genre",
         image: "/src/assets/img/reference2.jpg",
-        category: "Mobile"
+        category: "Typographie",
+        link: "https://www.typographicposters.com",
+        favicon: "https://www.google.com/s2/favicons?domain_url=www.typographicposters.com"
       },
       {
         id: 3,
-        title: "Design UI/UX",
-        description: "Interface utilisateur pour application web",
+        title: "Velvetyn",
+        description: "Bilbiothèque de typographie en ligne",
         image: "/src/assets/img/reference3.jpg",
-        category: "Design"
+        category: "Typographie",
+        link: "https://velvetyne.fr/",
+        favicon: "https://www.google.com/s2/favicons?domain_url=velvetyne.fr"
       },
       {
         id: 4,
@@ -197,7 +203,13 @@ export const useReferencesStore = defineStore('references', {
     getReferencesByCategory: (state) => (category) => {
       return state.references.filter(ref => ref.category === category)
     },
-    getReferencesCount: (state) => state.references.length
+    getReferencesCount: (state) => state.references.length,
+    getReferencesWithFavicons: (state) => {
+      return state.references.map(ref => ({
+        ...ref,
+        favicon: ref.link ? `https://icons.duckduckgo.com/ip2/${ref.link}.ico` : ""
+      }))
+    }
   },
 
   actions: {
