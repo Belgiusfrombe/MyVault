@@ -8,13 +8,13 @@ const route = useRoute();
 
 <template>
   <aside
-    class="fixed top-0 left-0 h-full w-1/4 header-gradient animate-gradient backdrop-blur-sm z-50 flex flex-col items-center py-8"
+    class="absolute left-0 h-full w-1/4 header-gradient animate-gradient backdrop-blur-sm z-50 flex flex-col items-center py-8"
   >
     <!-- Logo -->
      <router-link to="/" class="flex flex-col items-center justify-center gap-4">
       <h1 class="text-4xl font-bold">
         <span class="text-white">YOUR</span>
-        <span class="text-darkgreen">VAULT</span>
+        <span class="text-white">VAULT</span>
       </h1>
     <div class="relative h-28 w-28 mb-16">
       <Logo class="transition-transform duration-300 hover:rotate-180 hover:scale-110 cursor-pointer"/>
@@ -24,9 +24,9 @@ const route = useRoute();
     <nav class="flex flex-col items-start w-full px-8">
       <RouterLink
         to="/"
-        class="text-darkgreen hover:text-blue-500 transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
+        class="text-white hover:text-darkgreen transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
         :class="{
-          'font-bold text-blue-500': route.path === '/',
+          'font-bold': route.path === '/',
           'font-light': route.path !== '/',
         }"
       >
@@ -37,9 +37,9 @@ const route = useRoute();
 
       <RouterLink
         to="/services"
-        class="text-white hover:text-blue-500 transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
+        class="text-white hover:text-darkgreen transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
         :class="{
-          'font-bold text-blue-500': route.path === '/services',
+          'font-bold text-darkgreen': route.path === '/services',
           'font-light': route.path !== '/services',
         }"
       >
@@ -50,9 +50,9 @@ const route = useRoute();
 
       <RouterLink
         to="/about"
-        class="text-white hover:text-blue-500 transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
+        class="text-white hover:text-darkgreen transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
         :class="{
-          'font-bold text-blue-500': route.path === '/about',
+          'font-bold': route.path === '/about',
           'font-light': route.path !== '/about',
         }"
       >
@@ -63,9 +63,9 @@ const route = useRoute();
 
       <RouterLink
         to="/contact"
-        class="text-white hover:text-blue-500 transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
+        class="text-white hover:text-darkgreen transition-colors duration-300 flex items-center w-full justify-between py-2 font-bebas group"
         :class="{
-          'font-bold text-blue-500': route.path === '/contact',
+          'font-bold': route.path === '/contact',
           'font-light': route.path !== '/contact',
         }"
       >
@@ -92,10 +92,10 @@ const route = useRoute();
 .header-gradient {
   background: linear-gradient(
     300deg,
-    #0ecff6,
-    #f2f2f2,
-    #2df3ec,
-    #22f898,
+    #EB3349,
+    #ff4a4a,
+    #F45C43,
+    #e6ff69,
     #13cef8
   );
   background-size: 300% 300%;

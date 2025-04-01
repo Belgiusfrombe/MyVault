@@ -56,7 +56,7 @@
 
 <style scoped>
 .st0{
-	fill:#1F564A;
+	fill:#FFFF;
 }
 </style>
 

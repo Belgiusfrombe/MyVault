@@ -10,7 +10,6 @@ import AppHeader from "@/components/AppHeader.vue";
     <main class="flex-1 ml-[25%]">
       <RouterView />
     </main>
-    <AppFooter />
   </body>
 </template>
 

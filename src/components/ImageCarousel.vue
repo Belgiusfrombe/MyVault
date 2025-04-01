@@ -22,14 +22,14 @@ const referencesStore = useReferencesStore()
       <div class="text-center flex flex-row items-center justify-center">
         <h1 class="text-5xl font-bold">{{ referencesStore.getReferencesCount }}</h1>
         <div class="flex flex-col items-start">
-          <h2 class="text-5xl font-bold mb-4 gradient-text">OUTILS</h2>
-          <h2 class="text-5xl font-bold mb-4 gradient-text">DIFFÉRENTS</h2>
+          <h2 class="text-5xl font-bold mb-4 gradient-text">RéFéRENCES</h2>
+          <h2 class="text-5xl font-bold mb-4 gradient-text">DIFFÉRENTES</h2>
         </div>
       </div>
       
       <!-- Lorem ipsum -->
       <div class="mt-8 max-w-2xl text-center text-lg">
-        <p class="jolly-lodger-regular">Parfois quand on commence les références, on ne sait pas comment les utiliser, ni comment les trouver. C'est pourquoi nous avons créé ce site web pour vous aider à trouver les outils dont vous avez besoin.</p>
+        <p class="jolly-lodger-regular font-light">Parfois quand on commence les références, on ne sait pas comment les utiliser, ni comment les trouver. C'est pourquoi nous avons créé ce site web pour vous aider à trouver les outils dont vous avez besoin.</p>
       </div>
     </div>
   </section>
@@ -77,5 +77,10 @@ h2{
 
 .animate-slow-rotate {
   animation: slow-rotate 60s linear infinite;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
 }
 </style>
