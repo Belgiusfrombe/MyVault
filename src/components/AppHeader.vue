@@ -17,7 +17,7 @@ const route = useRoute();
         <span class="text-darkgreen">VAULT</span>
       </h1>
     <div class="relative h-28 w-28 mb-16">
-      <Logo />
+      <Logo class="transition-transform duration-300 hover:rotate-180 hover:scale-110 cursor-pointer"/>
     </div>
     </router-link>
     <!-- Navigation -->
